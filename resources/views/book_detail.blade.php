@@ -30,7 +30,7 @@
         </div>
     </section>
 
-    <section class="about-books">
+    {{-- <section class="about-books">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -49,12 +49,58 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="wanhu-books-content">
-                        {{-- <h3 class="typingheading">{{ $books->->name }}</h3> --}}
                         {!! $books->description !!}
-                        <!--<a href="#" class="btn btn-web blue-btn">Learn more</a>-->
                     </div>
                 </div>
             </div>
+        </div>
+    </section> --}}
+
+    @if($books->id == 17)
+    <section class="inner-book-content wanhu-pg crossing-banner-1">
+    @elseif($books->id == 19)
+    <section class="inner-book-content wanhu-pg crossing-banner-4">
+    @elseif($books->id == 20)
+    <section class="inner-book-content wanhu-pg crossing-banner-2">
+    @elseif($books->id == 21)
+    <section class="inner-book-content wanhu-pg crossing-banner-3">
+    @else
+    <section class="inner-book-content wanhu-pg crossing-banner">
+    @endif
+        <div class="animate-img cart1-img">
+            {{-- <img src="{{ asset('asset/images/wan-caracter3.png') }}" class="img-fliud" alt=""> --}}
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <h2 class="typingheading">{{ $books->product_title }}</h2>
+                        <!-- <h2>simply dummy text</h2> -->
+                        {!! $books->description !!}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-books">
+                        <div class="books-wanhu">
+                            <div class="atropos my-atropos">
+                                <div class="atropos-scale">
+                                    <div class="atropos-rotate">
+                                        <div class="atropos-inner">
+                                            <a href="JavaScript:;" id="show" class="main-text-1">
+                                                <img src="{{ asset($books->image) }}" class="img-fluid" alt=""
+                                                    data-atropos-offset="2">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animate-img cart2-img">
+            {{-- <img src="{{ asset('asset/images/wan-caracter4.png') }}" class="img-fliud" alt=""> --}}
         </div>
     </section>
 

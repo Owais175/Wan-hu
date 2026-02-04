@@ -79,11 +79,11 @@
             <div class="col-lg-12">
                 <div class="bottom-footer">
                     <div class="term-link">
-                        <p>Copyright © 2025, All right reserved</p>
+                        <p>Copyright © 2026, All right reserved</p>
                     </div>
                     <div class="term-link">
-                        <a href="#">Terms Of Services</a>
-                        <a href="#">Privacy Policy</a>
+                        <a href="{{route("terms_of_use")}}">Terms Of Services</a>
+                        <a href="{{route("privacy_policy")}}">Privacy Policy</a>
                     </div>
                 </div>
             </div>

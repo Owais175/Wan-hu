@@ -1,0 +1,54 @@
+@php
+    $page = \Illuminate\Support\Facades\DB::table('pages')->where('id', 36)->first();
+    $sections = \Illuminate\Support\Facades\DB::table('section')->where('page_id', 36)->get();
+    $banners = \Illuminate\Support\Facades\DB::table('banners')->get();
+@endphp
+
+@extends('layouts.app')
+@section('title', 'Home')
+
+@section('css')
+@endsection
+
+@section('content')
+
+    <style>
+        .about-books {
+            background-image: unset;
+            height: auto;
+        }
+    </style>
+
+
+    <section class="inner-book text-center">
+        <div class="container">
+            <h1>Blog Detail</h1>
+        </div>
+    </section>
+
+    <section class="about-books">
+        <div class="sides-animation farmer-img">
+            <img src="" class="img-fluid" alt="">
+        </div>
+        <div class="sides-animation farmer1-img">
+            <img src="" class="img-fluid" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wanhu-books-content">
+                        <h3 class="typingheading">{{ $blogs->name }}</h3>
+                        {!! $blogs->detail !!}
+                        <!--<a href="#" class="btn btn-web blue-btn">Learn more</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+@endsection
+
+@section('js')
+@endsection

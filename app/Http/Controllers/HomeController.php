@@ -43,7 +43,7 @@ class HomeController extends Controller
         $logo = imagetable::select('img_path')
             ->where('table_name', '=', 'logo')
             ->first();
-            
+
         $favicon = imagetable::select('img_path')
             ->where('table_name', '=', 'favicon')
             ->first();
@@ -154,10 +154,56 @@ class HomeController extends Controller
         return view('about');
     }
 
-    // public function blogs()
-    // {
-    //    return view('blogs');
-    // }
+    public function blogs()
+    {
+        $blogs = DB::table('blogs')->get();
+        return view('blogs', compact('blogs'));
+    }
+
+    public function blog_detail($id)
+    {
+        $blogs = DB::table('blogs')->where('id', $id)->first();
+        return view('blog_detail', compact('blogs'));
+    }
+
+    public function books()
+    {
+        $books = DB::table('products')->get();
+
+        foreach ($books as $book) {
+            $book->image = DB::table('product_imagess')
+                ->where('product_id', $book->id)
+                ->value('image'); // sirf pehli image
+        }
+        return view('books', compact('books'));
+    }
+
+    public function book_detail($id)
+    {
+        $books = DB::table('products')->where('id', $id)->first();
+        // dd($books);
+        return view('book_detail', compact('books'));
+    }
+
+    public function terms_of_use()
+    {
+        return view('terms_of_use');
+    }
+
+    public function privacy_policy()
+    {
+        return view('privacy_policy');
+    }
+
+    public function solutions()
+    {
+        return view('solutions');
+    }
+
+    public function imprint()
+    {
+        return view('imprint');
+    }
 
     public function contact()
     {

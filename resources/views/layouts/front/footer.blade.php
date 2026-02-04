@@ -8,10 +8,10 @@
                             <a href="{{route("contact")}}">Contact</a>
                         </li>
                         <li>
-                            <a href="#">Imprint</a>
+                            <a href="{{route("imprint")}}">Imprint</a>
                         </li>
                         <li>
-                            <a href="#">Blog</a>
+                            <a href="{{route("blogs")}}">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -20,13 +20,13 @@
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a href="#">Terms of Use</a>
+                            <a href="{{route("terms_of_use")}}">Terms of Use</a>
                         </li>
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a href="{{route("privacy_policy")}}">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#">Solutions</a>
+                            <a href="{{route("solutions")}}">Solutions</a>
                         </li>
                     </ul>
                 </div>

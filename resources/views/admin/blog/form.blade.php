@@ -8,12 +8,6 @@
         </div>
         <div class="col-md-12">
             <div class="form-group">
-                {!! Form::label('short_detail', 'Short Detail') !!}
-                {!! Form::textarea('short_detail', null, ('required' == 'required') ? ['class' => 'form-control', 'id' => 'summary-ckeditor', 'required' => 'required'] : ['class' => 'form-control']) !!}
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="form-group">
                 {!! Form::label('detail', 'Detail') !!}
                 {!! Form::textarea('detail', null, ('required' == 'required') ? ['class' => 'form-control', 'id' => 'summary-ckeditor1', 'required' => 'required'] : ['class' => 'form-control']) !!}
             </div>

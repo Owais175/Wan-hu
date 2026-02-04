@@ -147,7 +147,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('admin/order/delete/{id}', 'Admin\\ProductController@deleteOrder')
         ->name('order.delete');
     Route::post('course/move', 'Admin\\CourseController@move')->name('course.move');
-
 });
 
 //==============================================================//
@@ -277,7 +276,14 @@ Route::resource('admin/page', 'Admin\\PageController');
 
 
 Route::get('/about', 'HomeController@about')->name('about');
-// Route::get('/blogs', 'HomeController@blogs')->name('blogs');
+Route::get('/blogs', 'HomeController@blogs')->name('blogs');
+Route::get('/books', 'HomeController@books')->name('books');
+Route::get('/book_detail/{id}', 'HomeController@book_detail')->name('book_detail');
+Route::get('/terms_use', 'HomeController@terms_of_use')->name('terms_of_use');
+Route::get('/privacy_policy', 'HomeController@privacy_policy')->name('privacy_policy');
+Route::get('/solutions', 'HomeController@solutions')->name('solutions');
+Route::get('/blog_detail/{id}', 'HomeController@blog_detail')->name('blog_detail');
+Route::get('/imprint', 'HomeController@imprint')->name('imprint');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/book/{id}', 'HomeController@product_detail')->name('book.detail');
 Route::post('newsletter-submit', 'HomeController@newsletterSubmit')->name('newsletterSubmit');

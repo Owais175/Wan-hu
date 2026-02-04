@@ -18,8 +18,13 @@
                                 <a class="nav-link" href="{{ route('about') }}">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('blogs') }}">
                                     Blogs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('books') }}">
+                                    Books
                                 </a>
                             </li>
                             <li class="nav-item">

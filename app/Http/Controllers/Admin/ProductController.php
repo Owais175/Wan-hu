@@ -127,6 +127,16 @@ class ProductController extends Controller
             // Image::make($file)->save(public_path($destination_path) . DIRECTORY_SEPARATOR. $profileImage);
 
             $product->image = $destination_path . $profileImage;
+
+            if ($request->hasFile('background_img')) {
+
+                $bgFile = $request->file('background_img');
+                $bgName = date("YmdHis") . '_bg.' . $bgFile->getClientOriginalExtension();
+                $bgFile->move(public_path($destination_path), $bgName);
+
+                $product->background_img = $destination_path . $bgName;
+            }
+
             $product->save();
 
 
@@ -269,6 +279,19 @@ class ProductController extends Controller
             }
 
             // === save product ===
+
+            if ($request->hasFile('background_img')) {
+                if ($product->background_img && File::exists(public_path($product->background_img))) {
+                    File::delete(public_path($product->background_img));
+                }
+
+                $bg = $request->file('background_img');
+                $bgPath = 'uploads/products/';
+                $bgName = time() . '_bg.' . $bg->getClientOriginalExtension();
+                $bg->move(public_path($bgPath), $bgName);
+                $product->background_img = $bgPath . $bgName;
+            }
+
             $product->save();
 
             // === additional images (new add karne ke liye) ===

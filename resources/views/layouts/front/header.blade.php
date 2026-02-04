@@ -32,7 +32,7 @@
                             </li>
                         </ul>
                         <form class="d-flex top-btn">
-                            <a href="{{route('home')}}#bookssec" class="btn btn-web wth-btn">Books</a>
+                            <a href="{{route('books')}}" class="btn btn-web wth-btn">Books</a>
                         </form>
                     </div>
                 </nav>

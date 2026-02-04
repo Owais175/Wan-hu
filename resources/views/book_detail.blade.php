@@ -21,6 +21,41 @@
         .wanhu-books {
             justify-content: center;
         }
+
+
+        .crossing-banner {
+            background-image: url({{ asset($books->background_img) }});
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .crossing-banner:before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, black, transparent);
+        }
+
+        .crossing-banner .banner-content h2 {
+            color: white !important;
+            text-shadow: none !important;
+            line-height: 66px;
+
+        }
+
+        .crossing-banner .banner-content p {
+            color: white !important;
+            width: 90%;
+            line-height: 25px;
+            font-size: 16px;
+        }
     </style>
 
 
@@ -56,17 +91,7 @@
         </div>
     </section> --}}
 
-    @if($books->id == 17)
-    <section class="inner-book-content wanhu-pg crossing-banner-1">
-    @elseif($books->id == 19)
-    <section class="inner-book-content wanhu-pg crossing-banner-4">
-    @elseif($books->id == 20)
-    <section class="inner-book-content wanhu-pg crossing-banner-2">
-    @elseif($books->id == 21)
-    <section class="inner-book-content wanhu-pg crossing-banner-3">
-    @else
     <section class="inner-book-content wanhu-pg crossing-banner">
-    @endif
         <div class="animate-img cart1-img">
             {{-- <img src="{{ asset('asset/images/wan-caracter3.png') }}" class="img-fliud" alt=""> --}}
         </div>

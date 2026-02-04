@@ -72,6 +72,14 @@
                     value="{{ $product->additional_image }}" multiple>
             </div>
         </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                {!! Form::label('background_img', 'Background Image') !!}
+                <input class="form-control dropify" name="background_img" type="file" id="background_img"
+                    {{ $product->background_img != '' ? "data-default-file = /$product->background_img" : '' }}
+                    {{ $product->background_img == '' ? : '' }} value="{{ $product->background_img }}">
+            </div>
+        </div>
         {{-- <div class="col-md-12">
             <h4 class="card-title" id="repeat-form">Add Variation</h4>
         </div>

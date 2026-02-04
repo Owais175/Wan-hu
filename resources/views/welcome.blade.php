@@ -28,7 +28,7 @@
                                                 {!! $product->description !!}
                                                 <div class="banner-btn">
                                                     <a href="{{ route('contact') }}" class="btn btn-web trns-btn">Contact</a>
-                                                    <a href="#bookssec"
+                                                    <a href="{{route('books')}}"
                                                         class="btn btn-web blue-btn">Books</a>
                                                 </div>
                                             </div>

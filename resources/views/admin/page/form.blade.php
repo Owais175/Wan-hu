@@ -18,12 +18,19 @@
                 {!! Form::textarea('content', null, ('required' == 'required') ? ['class' => 'form-control', 'id' => 'summary-ckeditor', 'required' => 'required'] : ['class' => 'form-control']) !!}
             </div>
         </div>
+        @if($page->id == 38)
+        @elseif($page->id == 39)
+        @elseif($page->id == 40)
+        @elseif($page->id == 41)
+        @elseif($page->id == 42)
+        @else
         <div class="col-md-12">
             <div class="form-group">
                 {!! Form::label('image', 'Image') !!}
-                <input class="form-control dropify" name="image" type="file" id="image" {{ ($page->image != '') ? "data-default-file = " . asset($page->image) : ''}} {{ ($page->image == '') ? "required" : ''}} value="{{asset($page->image)}}">
+                <input class="form-control dropify" name="image" type="file" id="image" {{ ($page->image != '') ? "data-default-file = " . asset($page->image) : ''}} {{ ($page->image == '') ? : ''}} value="{{asset($page->image)}}">
             </div>
         </div>
+        @endif
         @foreach($page->sections as $section)
         <div class="col-md-12">
             <div class="form-group">

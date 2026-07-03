@@ -7,9 +7,9 @@
                         <li>
                             <a href="{{route("contact")}}">Contact</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{route("imprint")}}">Imprint</a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{route("blogs")}}">Blog</a>
                         </li>
@@ -51,11 +51,11 @@
                 <div class="footer-links tel-a">
                     <h6>Folow us on</h6>
                     <ul class="d-ul">
-                        <li>
+                        {{-- <li>
                             <a href="{{$linkedin->flag_value}}">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{ $instagram->flag_value }}">
                                 <i class="fa-brands fa-instagram"></i>

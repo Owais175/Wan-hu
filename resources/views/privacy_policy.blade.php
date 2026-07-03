@@ -38,7 +38,7 @@
                 <div class="col-lg-12">
                     <div class="wanhu-books-content">
                         {{-- @dd($page->name); --}}
-                        <h3 class="typingheading">{{$page->name}}</h3>
+                        {{-- <h3 class="typingheading">{{$page->name}}</h3> --}}
                         {!!$page->content!!}
                         <!--<a href="#" class="btn btn-web blue-btn">Learn more</a>-->
                     </div>

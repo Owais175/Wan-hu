@@ -5,7 +5,9 @@
 @endphp
 
 @extends('layouts.app')
-@section('title', 'Home')
+@section('title', 'About')
+
+@section('canonical', 'https://roymontzauthor.com/about')
 
 @section('css')
 @endsection

@@ -40,8 +40,9 @@
     @php
         $web_title = DB::table('m_flag')->where('id', 5)->first();
     @endphp
-    <title>{{ $web_title->flag_value }}</title>
-    <link rel="canonical" href="{{ url()->current() }}" />
+   <title> {{ $web_title->flag_value }}</title>
+   
+   <link rel="canonical" href="@yield('canonical')" />
 </head>
 
 <style>

@@ -6,7 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-
+<link rel="canonical" href="https://roymontzauthor.com/the_crossing" />
 @section('css')
 @endsection
 

@@ -65,13 +65,6 @@ class HomeController extends Controller
             ->get();
         $testimonial = DB::table('testimonials')->get();
 
-        $company_email = DB::table('m_flag')->where('id', 1)->first();
-        $facebook = DB::table('m_flag')->where('id', 2)->first();
-        $instagram = DB::table('m_flag')->where('id', 3)->first();
-        $linkedin = DB::table('m_flag')->where('id', 4)->first();
-
-        // dd($products);
-
         $legend_wanhu = DB::table('products')
             ->leftJoin('product_imagess', 'products.id', '=', 'product_imagess.product_id')
             ->where('products.id', 17)
@@ -99,7 +92,7 @@ class HomeController extends Controller
 
         // dd($legend_wanhu);
 
-        return view('welcome', compact('products', 'testimonial', 'facebook', 'instagram', 'linkedin', 'company_email', 'legend_wanhu', 'macabee_brothers', 'farmer_dell_jezebell', 'the_crossing'));
+        return view('welcome', compact('products', 'testimonial', 'legend_wanhu', 'macabee_brothers', 'farmer_dell_jezebell', 'the_crossing'));
     }
 
     public function legend_wanhu()

@@ -5,13 +5,13 @@
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a href="{{route("contact")}}">Contact</a>
+                            <a href="{{ route('contact') }}">Contact</a>
                         </li>
                         {{-- <li>
                             <a href="{{route("imprint")}}">Imprint</a>
                         </li> --}}
                         <li>
-                            <a href="{{route("blogs")}}">Blog</a>
+                            <a href="{{ route('blogs') }}">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -20,13 +20,13 @@
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a href="{{route("terms_of_use")}}">Terms of Use</a>
+                            <a href="{{ route('terms_of_use') }}">Terms of Use</a>
                         </li>
                         <li>
-                            <a href="{{route("privacy_policy")}}">Privacy Policy</a>
+                            <a href="{{ route('privacy_policy') }}">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="{{route("solutions")}}">Solutions</a>
+                            <a href="{{ route('solutions') }}">Solutions</a>
                         </li>
                     </ul>
                 </div>
@@ -49,6 +49,12 @@
             </div>
             <div class="col-lg-3">
                 <div class="footer-links tel-a">
+                    @php
+                        $company_email = DB::table('m_flag')->where('id', 1)->first();
+                        $facebook = DB::table('m_flag')->where('id', 2)->first();
+                        $instagram = DB::table('m_flag')->where('id', 3)->first();
+                        $linkedin = DB::table('m_flag')->where('id', 4)->first();
+                    @endphp
                     <h6>Folow us on</h6>
                     <ul class="d-ul">
                         {{-- <li>
@@ -67,7 +73,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="mailto:info@wanhu.com" class="info-email">{{$company_email->flag_value}}</a>
+                    <a href="mailto:info@wanhu.com" class="info-email">{{ $company_email->flag_value }}</a>
                 </div>
             </div>
         </div>
@@ -82,8 +88,8 @@
                         <p>Copyright © 2026, All right reserved</p>
                     </div>
                     <div class="term-link">
-                        <a href="{{route("terms_of_use")}}">Terms Of Services</a>
-                        <a href="{{route("privacy_policy")}}">Privacy Policy</a>
+                        <a href="{{ route('terms_of_use') }}">Terms Of Services</a>
+                        <a href="{{ route('privacy_policy') }}">Privacy Policy</a>
                     </div>
                 </div>
             </div>

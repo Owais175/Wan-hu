@@ -104,6 +104,7 @@ class ProductController extends Controller
                 'description' => 'required',
                 'price' => 'required',
                 'image' => 'required',
+                'link' => 'nullable|url',
             ]);
 
             //echo implode(",",$_POST['language']);
@@ -111,6 +112,7 @@ class ProductController extends Controller
             $product = new product;
 
             $product->product_title = $request->input('product_title');
+            $product->link = $request->input('link');
             $product->price = $request->input('price');
             $product->description = $request->input('description');
             $product->category = $request->input('category');
@@ -252,6 +254,7 @@ class ProductController extends Controller
                 'description'   => 'required',
                 'price'         => 'required',
                 'category'      => 'required',
+                'link' => 'nullable|url',
                 // banner_image ko required nahi rakha
                 // 'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
@@ -260,6 +263,7 @@ class ProductController extends Controller
 
             // === basic fields ===
             $product->product_title = $request->input('product_title');
+            $product->link = $request->input('link');
             $product->price         = $request->input('price');
             $product->description   = $request->input('description');
             $product->category      = $request->input('category');

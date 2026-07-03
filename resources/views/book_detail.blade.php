@@ -103,6 +103,9 @@
                         <!-- <h2>simply dummy text</h2> -->
                         {!! $books->description !!}
                     </div>
+                    <div class="banner-btn">
+                        <a href="{{ $books->link }}" class="btn btn-web blue-btn">Buy Now</a>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="banner-books">

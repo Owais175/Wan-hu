@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="16x16"
-        href="{{asset(!empty($favicon->img_path) ? $favicon->img_path : '')}}">
+        href="{{ asset(!empty($favicon->img_path) ? $favicon->img_path : '') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -37,8 +37,11 @@
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/inner.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/responsive.css') }}">
-
-    <title>{{ config('app.name') }}</title>
+    @php
+        $web_title = DB::table('m_flag')->where('id', 5)->first();
+    @endphp
+    <title>{{ $web_title->flag_value }}</title>
+    <link rel="canonical" href="{{ url()->current() }}" />
 </head>
 
 <style>
@@ -71,7 +74,7 @@
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-            </script>
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
             integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -79,8 +82,8 @@
         <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.2/atropos.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-            $(document).ready(function () {
-                $('#newsletterFormFooter').on('submit', function (e) {
+            $(document).ready(function() {
+                $('#newsletterFormFooter').on('submit', function(e) {
                     e.preventDefault();
 
                     let form = $(this);
@@ -95,7 +98,7 @@
                         url: form.attr('action'),
                         method: form.attr('method'),
                         data: form.serialize(),
-                        success: function (response) {
+                        success: function(response) {
                             if (response.status) {
                                 Swal.fire({
                                     icon: 'success',
@@ -114,14 +117,14 @@
                                 });
                             }
                         },
-                        error: function (xhr) {
+                        error: function(xhr) {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error',
                                 text: 'Something went wrong, please try again.'
                             });
                         },
-                        complete: function () {
+                        complete: function() {
                             loader.hide();
                             submitBtn.prop('disabled', false);
                         }
@@ -131,7 +134,7 @@
         </script>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function() {
                 document.querySelectorAll('.my-atropos').forEach(el => {
                     Atropos({
                         el: el,

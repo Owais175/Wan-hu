@@ -6,7 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-<link rel="canonical" href="https://roymontzauthor.com/privacy_policy" />
+@section('canonical', 'https://roymontzauthor.com/privacy_policy')
 @section('css')
 @endsection
 

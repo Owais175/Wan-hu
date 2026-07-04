@@ -6,7 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-<link rel="canonical" href="https://roymontzauthor.com/macabee_brothers" />
+@section('canonical', 'https://roymontzauthor.com/macabee_brothers')
 @section('css')
 @endsection
 

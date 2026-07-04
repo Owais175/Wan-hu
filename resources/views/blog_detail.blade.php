@@ -6,8 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-
-
+@section('canonical', 'https://roymontzauthor.com/blog_detail/' . $blogs->id)
 @section('css')
 @endsection
 

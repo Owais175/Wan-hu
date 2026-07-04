@@ -6,9 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-@section('canonical', url('https://roymontzauthor.com'))
-
-
+@section('canonical', 'https://roymontzauthor.com')
 @section('css')
 @endsection
 

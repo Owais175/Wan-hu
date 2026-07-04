@@ -6,7 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-<link rel="canonical" href="https://roymontzauthor.com/farmer_dell_jezebell" />
+@section('canonical', 'https://roymontzauthor.com/farmer_dell_jezebell')
 @section('css')
 @endsection
 

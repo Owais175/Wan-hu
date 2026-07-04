@@ -6,7 +6,7 @@
 
 @extends('layouts.app')
 @section('title', 'Home')
-
+@section('canonical', 'https://roymontzauthor.com/book_detail/' . $books->id)
 @section('css')
 @endsection
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Home')
-<link rel="canonical" href="https://roymontzauthor.com/contact" />
+@section('canonical', 'https://roymontzauthor.com/contact')
 @section('css')
 @endsection
 

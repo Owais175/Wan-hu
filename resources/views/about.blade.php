@@ -22,17 +22,16 @@
 
     <section class="about-books">
         <div class="sides-animation farmer-img">
-            <img src="{{ $sections[1]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[4]->value }}" class="img-fluid" alt="">
         </div>
         <div class="sides-animation farmer1-img">
-            <img src="{{ $sections[2]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[5]->value }}" class="img-fluid" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wanhu-books">
-                        {!! $sections[0]->value !!}
-                        {{-- <a href="#" class="btn btn-web blue-btn">Buy this on kindle</a> --}}
+                        <a href="{{ url($sections[1]->value) }}" class="btn btn-web blue-btn">{{ $sections[0]->value }}</a>
                         <div class="atropos my-atropos">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
@@ -43,8 +42,7 @@
                                 </div>
                             </div>
                         </div>
-                        {!! $sections[1]->value !!}
-                        {{-- <a href="#" class="btn btn-web wth-btn">Buy this on amazon</a> --}}
+                        <a href="{{ url($sections[3]->value) }}" class="btn btn-web wth-btn">{{ $sections[2]->value }}</a>
                     </div>
                 </div>
                 <div class="col-lg-12">

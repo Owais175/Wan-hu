@@ -27,9 +27,9 @@
                                                 <!-- <h2>simply dummy text</h2> -->
                                                 {!! $product->description !!}
                                                 <div class="banner-btn">
-                                                    <a href="{{ route('contact') }}"
-                                                        class="btn btn-web trns-btn">Contact</a>
-                                                    <a href="{{ route('books') }}" class="btn btn-web blue-btn">Books</a>
+                                                    <a href="{{ $sections[22]->value }}"
+                                                        class="btn btn-web trns-btn">{{ $sections[21]->value }}</a>
+                                                    <a href="{{ $sections[20]->value }}" class="btn btn-web blue-btn">{{ $sections[19]->value }}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,9 +77,8 @@
                         <div class="animate-img right-img">
                             <img src="{{ asset('asset/images/1.png') }}" class="img-fliud" alt="">
                         </div>
-                        {!! $sections[11]->value !!}
-                        {!! $sections[12]->value !!}
-                        {{-- <a href="#reviews" class="btn btn-web blue-btn">More Reviews</a> --}}
+                        {!! $sections[15]->value !!}
+                        <a href="{{url($sections[17]->value)}}" class="btn btn-web blue-btn">{{ $sections[16]->value }}</a>
 
                         <div class="animate-img left-img">
                             <img src="{{ asset('asset/images/2.png') }}" class="img-fliud" alt="">
@@ -158,17 +157,16 @@
     </section>
     <section class="about-books">
         <div class="sides-animation farmer-img">
-            <img src="{{ $sections[2]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[4]->value }}" class="img-fluid" alt="">
         </div>
         <div class="sides-animation farmer1-img">
-            <img src="{{ $sections[3]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[5]->value }}" class="img-fluid" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wanhu-books">
-                        {!! $sections[0]->value !!}
-                        {{-- <a href="#" class="btn btn-web blue-btn">Buy this on kindle</a> --}}
+                        <a href="{{ url($sections[1]->value) }}" class="btn btn-web blue-btn">{{ $sections[0]->value }}</a>
                         <div class="atropos my-atropos">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
@@ -179,16 +177,14 @@
                                 </div>
                             </div>
                         </div>
-                        {!! $sections[1]->value !!}
-                        {{-- <a href="#" class="btn btn-web wth-btn">Buy this on amazon</a> --}}
+                        <a href="{{ url($sections[3]->value) }}" class="btn btn-web wth-btn">{{ $sections[2]->value }}</a>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="wanhu-books-content">
                         <h3 class="typingheading">{{ $page->name }}</h3>
                         {!! $page->content !!}
-                        {!! $sections[4]->value !!}
-                        {{-- <a href="{{route('about')}}" class="btn btn-web blue-btn">Read More</a> --}}
+                        <a href="{{ url($sections[7]->value) }}" class="btn btn-web blue-btn">{{ $sections[6]->value }}</a>
                     </div>
                 </div>
             </div>
@@ -200,7 +196,7 @@
                 <div class="col-lg-12">
                     <div class="video-wanhu">
                         <video width="100%" height="100%" autoplay="" muted="" loop class="mySwiperVideo">
-                            <source src="{{ asset($sections[5]->value) }}" type="video/mp4">
+                            <source src="{{ asset($sections[8]->value) }}" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">
                         </video>
                     </div>
@@ -221,10 +217,10 @@
     </section>
     <section class="new-audibook">
         <div class="sides-animation farmer2-img">
-            <img src="{{ $sections[7]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[10]->value }}" class="img-fluid" alt="">
         </div>
         <div class="sides-animation farmer3-img">
-            <img src="{{ $sections[8]->value }}" class="img-fluid" alt="">
+            <img src="{{ $sections[11]->value }}" class="img-fluid" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -235,16 +231,15 @@
                                 <div class="col-lg-4">
                                     <div class="phone-img">
                                         <figure>
-                                            <img src="{{ $sections[6]->value }}" class="img-fluid" alt="">
+                                            <img src="{{ $sections[9]->value }}" class="img-fluid" alt="">
                                         </figure>
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="phone-img">
-                                        {!! $sections[9]->value !!}
+                                        {!! $sections[12]->value !!}
                                         <div class="btn-flux">
-                                            {!! $sections[10]->value !!}
-                                            {{-- <a class="btn btn-web wth-btn">Buy this on audible</a> --}}
+                                            <a href="{{ url($sections[14]->value) }}" class="btn btn-web wth-btn">{{ $sections[13]->value }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +255,7 @@
             <div class="row">
                 <div class="col-lg-12 p-0">
                     <div class="main-testimonial">
-                        <h2 class="typingheading">{{ $sections[13]->value }}</h2>
+                        <h2 class="typingheading">{{ $sections[18]->value }}</h2>
                     </div>
                 </div>
                 <div class="col-lg-12">

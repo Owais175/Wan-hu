@@ -22,6 +22,9 @@
             justify-content: center;
         }
 
+        .btn:hover {
+            color: white !important;
+        }
 
         .crossing-banner {
             background-image: url({{ asset($books->background_img) }});

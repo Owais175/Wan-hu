@@ -31,7 +31,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wanhu-books">
-                        <a href="#" class="btn btn-web blue-btn">Buy this on kindle</a>
+                        {!! $sections[0]->value !!}
+                        {{-- <a href="#" class="btn btn-web blue-btn">Buy this on kindle</a> --}}
                         <div class="atropos my-atropos">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
@@ -42,7 +43,8 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-web wth-btn">Buy this on amazon</a>
+                        {!! $sections[1]->value !!}
+                        {{-- <a href="#" class="btn btn-web wth-btn">Buy this on amazon</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-12">

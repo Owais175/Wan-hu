@@ -94,12 +94,12 @@
                             <span data-i18n="eCommerce">Books</span>
                         </a>
                     </li>
-                    <li
+                    {{-- <li
                         class="{{ (request()->is('admin/order/list') || request()->is('admin/order/list/*')) ? 'active' : '' }}">
                         <a class="menu-item" href="{{url('admin/order/list')}}"><i></i>
                             <span data-i18n="eCommerce">Orders</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li class="nav-item">

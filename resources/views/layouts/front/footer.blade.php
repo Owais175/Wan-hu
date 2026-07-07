@@ -73,7 +73,9 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="mailto:info@wanhu.com" class="info-email">{{ $company_email->flag_value }}</a>
+                    {{-- @dd($company_email) --}}
+                    <a href="mailto:{{ $company_email->flag_value }}"
+                        class="info-email">{{ $company_email->flag_value }}</a>
                 </div>
             </div>
         </div>

@@ -107,7 +107,7 @@
                         {!! $books->description !!}
                     </div>
                     <div class="banner-btn">
-                        <a href="{{ $books->link }}" class="btn btn-web blue-btn">Buy Now</a>
+                        <a href="{{ $books->link }}" target="_blank" class="btn btn-web blue-btn">Buy Now</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

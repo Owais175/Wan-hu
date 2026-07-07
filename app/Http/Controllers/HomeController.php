@@ -89,10 +89,21 @@ class HomeController extends Controller
             ->select('products.*', 'product_imagess.image as additional_image')
             ->first();
 
+        $books = DB::table('products')
+            ->latest('created_at')
+            ->take(4)
+            ->get();
+
+        foreach ($books as $book) {
+            $book->image = DB::table('product_imagess')
+                ->where('product_id', $book->id)
+                ->value('image');
+        }
+
 
         // dd($legend_wanhu);
 
-        return view('welcome', compact('products', 'testimonial', 'legend_wanhu', 'macabee_brothers', 'farmer_dell_jezebell', 'the_crossing'));
+        return view('welcome', compact('products', 'books', 'testimonial', 'legend_wanhu', 'macabee_brothers', 'farmer_dell_jezebell', 'the_crossing'));
     }
 
     public function legend_wanhu()
@@ -161,13 +172,16 @@ class HomeController extends Controller
 
     public function books()
     {
-        $books = DB::table('products')->get();
+        $books = DB::table('products')
+            ->orderBy('id', 'DESC')
+            ->get();
 
         foreach ($books as $book) {
             $book->image = DB::table('product_imagess')
                 ->where('product_id', $book->id)
-                ->value('image'); // sirf pehli image
+                ->value('image'); // Sirf pehli image
         }
+
         return view('books', compact('books'));
     }
 

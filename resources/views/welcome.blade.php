@@ -29,7 +29,8 @@
                                                 <div class="banner-btn">
                                                     <a href="{{ $sections[22]->value }}"
                                                         class="btn btn-web trns-btn">{{ $sections[21]->value }}</a>
-                                                    <a href="{{ $sections[20]->value }}" class="btn btn-web blue-btn">{{ $sections[19]->value }}</a>
+                                                    <a href="{{ $sections[20]->value }}"
+                                                        class="btn btn-web blue-btn">{{ $sections[19]->value }}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,7 +79,8 @@
                             <img src="{{ asset('asset/images/1.png') }}" class="img-fliud" alt="">
                         </div>
                         {!! $sections[15]->value !!}
-                        <a href="{{url($sections[17]->value)}}" class="btn btn-web blue-btn">{{ $sections[16]->value }}</a>
+                        <a href="{{ url($sections[17]->value) }}"
+                            class="btn btn-web blue-btn">{{ $sections[16]->value }}</a>
 
                         <div class="animate-img left-img">
                             <img src="{{ asset('asset/images/2.png') }}" class="img-fliud" alt="">
@@ -93,65 +95,28 @@
                         <h2 class="typingheading">Books</h2>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="book-list box">
-                        <a href="{{ route('legend_wanhu') }}" id="show1" class="main-text-2">
-                            <div class="book-img">
-                                <img src="{{ $legend_wanhu->additional_image }}" class="img-fluid" alt="">
-                            </div>
-                            <div class="book-name">
-                                <h5>
-                                    {{ $legend_wanhu->product_title }}
-                                </h5>
-                            </div>
-                        </a>
+                @foreach ($books as $books)
+                    <div class="col-lg-3">
+                        <div class="book-list box"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                            <a href="{{ route('book_detail', $books->id) }}" id="show1" class="main-text-2">
+                                <div class="book-img">
+                                    @if ($books->image)
+                                        <img src="{{ asset($books->image) }}" class="img-fluid" alt="">
+                                    @else
+                                        <img src="{{ asset('images/no-image.png') }}" class="img-fluid" alt="">
+                                    @endif
+                                </div>
+                                <div class="book-name">
+                                    <h5>
+                                        {{ $books->product_title }}
+                                    </h5>
+                                </div>
+                            </a>
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="book-list box">
-                        <a href="{{ route('macabee_brothers') }}" id="show3" class="main-text-3">
-                            <div class="book-img">
-                                <img src="{{ $macabee_brothers->additional_image }}" class="img-fluid" alt="">
-                            </div>
-                            <div class="book-name">
-                                <h5>
-                                    {{ $macabee_brothers->product_title }}
-                                </h5>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="book-list box">
-                        <a href="{{ route('farmer_dell_jezebell') }}" id="show4" class="main-text-4">
-                            <div class="book-img">
-                                <img src="{{ $farmer_dell_jezebell->additional_image }}" class="img-fluid" alt="">
-                            </div>
-                            <div class="book-name">
-                                <h5>
-                                    {{ $farmer_dell_jezebell->product_title }}
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="book-list box">
-                        <a href="{{ route('the_crossing') }}" id="show2" class="main-text-2">
-                            <div class="book-img">
-                                <img src="{{ $the_crossing->additional_image }}" class="img-fluid" alt="">
-                            </div>
-                            <div class="book-name">
-                                <h5>
-                                    {{ $the_crossing->product_title }}
-                                    </h6>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -166,7 +131,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wanhu-books">
-                        <a href="{{ url($sections[1]->value) }}" class="btn btn-web blue-btn">{{ $sections[0]->value }}</a>
+                        <a href="{{ url($sections[1]->value) }}"
+                            class="btn btn-web blue-btn">{{ $sections[0]->value }}</a>
                         <div class="atropos my-atropos">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
@@ -177,14 +143,16 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ url($sections[3]->value) }}" class="btn btn-web wth-btn">{{ $sections[2]->value }}</a>
+                        <a href="{{ url($sections[3]->value) }}"
+                            class="btn btn-web wth-btn">{{ $sections[2]->value }}</a>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="wanhu-books-content">
                         <h3 class="typingheading">{{ $page->name }}</h3>
                         {!! $page->content !!}
-                        <a href="{{ url($sections[7]->value) }}" class="btn btn-web blue-btn">{{ $sections[6]->value }}</a>
+                        <a href="{{ url($sections[7]->value) }}"
+                            class="btn btn-web blue-btn">{{ $sections[6]->value }}</a>
                     </div>
                 </div>
             </div>
@@ -239,7 +207,8 @@
                                     <div class="phone-img">
                                         {!! $sections[12]->value !!}
                                         <div class="btn-flux">
-                                            <a href="{{ url($sections[14]->value) }}" class="btn btn-web wth-btn">{{ $sections[13]->value }}</a>
+                                            <a href="{{ url($sections[14]->value) }}"
+                                                class="btn btn-web wth-btn">{{ $sections[13]->value }}</a>
                                         </div>
                                     </div>
                                 </div>

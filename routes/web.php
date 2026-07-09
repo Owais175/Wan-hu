@@ -280,6 +280,7 @@ Route::get('/blogs', 'HomeController@blogs')->name('blogs');
 Route::get('/books', 'HomeController@books')->name('books');
 Route::get('/book_detail/{id}', 'HomeController@book_detail')->name('book_detail');
 Route::get('/terms_use', 'HomeController@terms_of_use')->name('terms_of_use');
+Route::get('/optoutoption', 'HomeController@optoutoption')->name('optoutoption');
 Route::get('/privacy_policy', 'HomeController@privacy_policy')->name('privacy_policy');
 Route::get('/solutions', 'HomeController@solutions')->name('solutions');
 Route::get('/blog_detail/{id}', 'HomeController@blog_detail')->name('blog_detail');

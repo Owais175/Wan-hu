@@ -196,6 +196,10 @@ class HomeController extends Controller
     {
         return view('terms_of_use');
     }
+    public function optoutoption()
+    {
+        return view('optoutoption');
+    }
 
     public function privacy_policy()
     {

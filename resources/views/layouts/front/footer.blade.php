@@ -90,6 +90,7 @@
                         <p>Copyright © 2026, All right reserved</p>
                     </div>
                     <div class="term-link">
+                        <a href="{{ route('optoutoption') }}">Opt-Out-Option</a>
                         <a href="{{ route('terms_of_use') }}">Terms Of Services</a>
                         <a href="{{ route('privacy_policy') }}">Privacy Policy</a>
                     </div>

@@ -40,9 +40,11 @@
     @php
         $web_title = DB::table('m_flag')->where('id', 5)->first();
     @endphp
-   <title> {{ $web_title->flag_value }}</title>
-   <link rel="canonical" href="@yield('canonical')" />
-
+    <title> {{ $web_title->flag_value }}</title>
+    <link rel="canonical" href="@yield('canonical')" />
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/a741a7fdc06b4838dfda6d5291b7bf92/script.js"></script> <!-- End cookieyes banner -->
 </head>
 
 <style>

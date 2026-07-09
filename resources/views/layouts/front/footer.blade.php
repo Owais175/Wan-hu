@@ -55,7 +55,7 @@
                         $instagram = DB::table('m_flag')->where('id', 3)->first();
                         $linkedin = DB::table('m_flag')->where('id', 4)->first();
                     @endphp
-                    <h6>Folow us on</h6>
+                    <h6>Follow us on</h6>
                     <ul class="d-ul">
                         {{-- <li>
                             <a href="{{$linkedin->flag_value}}">

@@ -81,15 +81,15 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="address-section">
-                        <h6><b>Address:</b></h6>
-                        <p>{{ $address->flag_value ?? 'No address available' }}</p>
-                    </div>
                     {{-- @dd($company_email) --}}
-                    <div class="address-section mt-3">
+                    <div class="address-section ">
                         <h6><b>Email:</b></h6>
                     <a href="mailto:{{ $company_email->flag_value }}"
                         class="info-email">{{ $company_email->flag_value }}</a>
+                    </div>
+                    <div class="address-section mt-3">
+                        <h6><b>Address:</b></h6>
+                        <p>{{ $address->flag_value ?? 'No address available' }}</p>
                     </div>
                 </div>
             </div>
